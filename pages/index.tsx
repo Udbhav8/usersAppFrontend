@@ -1,21 +1,26 @@
 import type { NextPage } from "next";
 import { Flex } from "@chakra-ui/react";
-import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { User } from "../src/types";
+import { HomePage } from "../src/components/HomePage";
 
 const Home: NextPage = () => {
+  const [users, setUsers] = useState([] as User[]);
+  const [count, setCount] = useState(0);
   const getUsers = async () => {
-    fetch("https://usersappudbhav.herokuapp.com/users//")
+    fetch("https://usersappudbhav.herokuapp.com/users/")
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        setUsers(data.users);
+        setCount(data.count);
+      })
       .catch((err) => console.log(err));
   };
-
   useEffect(() => {
     getUsers();
   }, []);
 
-  return <Flex>Hello</Flex>;
-};
+  return(<HomePage users={users} count={count} />)
+}
 
 export default Home;
