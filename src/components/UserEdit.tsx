@@ -38,14 +38,13 @@ export const UserEdit = () => {
     setIsSubmitting(false);
   };
 
-  React.useEffect(() => {
-    if (userId) {
-      getUser();
-    }
-  });
+  if (userId) {
+    getUser();
+  }
   const fetching = isSubmitting;
 
   if (!user) {
+    getUser();
     return <Box>Loading...</Box>;
   }
 
