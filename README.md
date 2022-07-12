@@ -1,6 +1,5 @@
 This Project is deployed live on https://users-app-frontend.vercel.app. Below are the screenshots of the app.
-The Backend of this app is built using Django and the source code for the backend can be found here https://github.com/Udbhav8/userAPI
-
+The Backend of this app is built using Django and can be found here https://github.com/Udbhav8/userAPI
 
 <img width="402" alt="Screen Shot 2022-07-12 at 11 50 19 PM" src="https://user-images.githubusercontent.com/77800550/178566350-defb0b8c-8a28-4f21-bb06-963650fb880a.png">
 <img width="400" alt="Screen Shot 2022-07-12 at 11 50 32 PM" src="https://user-images.githubusercontent.com/77800550/178566379-c2204771-16c6-4cfe-a448-2879bfa34373.png">
