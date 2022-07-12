@@ -5,7 +5,7 @@ import { User } from "../src/types";
 import { HomePage } from "../src/components/HomePage";
 
 const Home: NextPage = () => {
-  const [users, setUsers] = useState([] as User[]);
+  const [users, setUsers] = useState(null);
   const [count, setCount] = useState(0);
   const getUsers = async () => {
     fetch("https://usersappudbhav.herokuapp.com/users/")
@@ -19,11 +19,11 @@ const Home: NextPage = () => {
   useEffect(() => {
     getUsers();
   }, []);
-  if(!users){
-    return <Flex>Loading...</Flex>
+  if (!users) {
+    return <Flex>Loading...</Flex>;
   }
 
-  return(<HomePage users={users} count={count} />)
-}
+  return <HomePage users={users} count={count} />;
+};
 
 export default Home;
