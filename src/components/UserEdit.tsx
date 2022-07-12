@@ -13,7 +13,7 @@ export const UserEdit = () => {
   const [user, setUser] = React.useState<User>();
 
   const getUser = async () => {
-    fetch(`http://usersappudbhav.herokuapp.com/user/${userId}`)
+    fetch(`https://usersappudbhav.herokuapp.com/user/${userId}`)
       .then((res) => res.json())
       .then((data) => setUser(data))
       .catch((err) => console.log(err));
@@ -22,7 +22,7 @@ export const UserEdit = () => {
   const deleteUser = async () => {
     setIsSubmitting(true);
     const res = await fetch(
-      `http://usersappudbhav.herokuapp.com/update-user/${userId}`,
+      `https://usersappudbhav.herokuapp.com/update-user/${userId}`,
       {
         headers: {
           "Content-Type": "application/json",
