@@ -19,6 +19,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     getUsers();
   }, []);
+  if(!users){
+    return <Flex>Loading...</Flex>
+  }
 
   return(<HomePage users={users} count={count} />)
 }

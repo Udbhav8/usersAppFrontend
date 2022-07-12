@@ -10,9 +10,7 @@ interface HomePageProps {
 }
 export const HomePage = (props: HomePageProps) => {
   const { users, count } = props;
-  if (!users) {
-    return <Box>Loading...</Box>;
-  }
+
   return (
     <>
       <Header heading="Team Members" count={count} showIcon={true}></Header>
